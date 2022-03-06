@@ -1,18 +1,24 @@
-.nav {
-  position: fixed;
-  height: 60px;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: darkblue;
+.header {
+  width: 100%;
+  background: var(--color-dark-blue);
+}
+
+.header__inner {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
-.nav a {
-  text-decoration: none;
-  color: #fff;
+
+.header__logo {
+  pointer-events: none;
 }
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .main {
   margin-top: 60px;
   padding: 1rem;

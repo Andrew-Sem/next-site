@@ -1,10 +1,11 @@
 import Head from "next/head";
-import Link from "next/link";
 import classes from "./MainLayout.module.css";
+import CustomLink from "./../CustomLink/CustomLink";
+import Image from "next/image";
 
 export default function MainLayout({ children, title = "Next App" }) {
   return (
-    <div>
+    <>
       <Head>
         <title>{title}</title>
         <meta
@@ -14,15 +15,24 @@ export default function MainLayout({ children, title = "Next App" }) {
         <meta name="description" content="losos" />
         <meta charSet="utf-8" />
       </Head>
-      <nav className={classes.nav}>
-        <Link href={"/"}>
-          <a>Home</a>
-        </Link>
-        <Link href={"/about"}>
-          <a>About</a>
-        </Link>
-      </nav>
+      <header className={classes.header}>
+        <div className="container">
+          <div className={classes.header__inner}>
+            <Image
+              src="/assets/img/logo.png"
+              alt="app logo"
+              width={60}
+              height={60}
+            />
+            <nav className={classes.nav}>
+              <CustomLink title={"Home"} href={"/"} />
+              <CustomLink title={"About"} href={"/about"} />
+            </nav>
+          </div>
+        </div>
+      </header>
+
       <main className={classes.main}>{children}</main>
-    </div>
+    </>
   );
 }

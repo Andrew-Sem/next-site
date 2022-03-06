@@ -1,3 +1,17 @@
+#__next {
+  --font-base: "Montserrat", serif;
+
+  --color-golden: #dcca87;
+  --color-black: #0c0c0c;
+  --color-gray: #545454;
+  --color-crimson: #f5efdb;
+  --color-grey: #aaaaaa;
+  --color-white: rgba(255, 255, 255, 0.7);
+  --color-dark-blue: #1a1e25;
+  --color-blue: #232831;
+  --color-light-blue: #61dafb;
+}
+
 html,
 body {
   padding: 0;
@@ -12,4 +26,27 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  padding: 1rem 10rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 2000px) {
+  .container {
+    padding: 1rem 10rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    padding: 1rem 7rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    padding: 1rem;
+  }
 }
