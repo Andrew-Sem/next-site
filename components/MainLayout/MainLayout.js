@@ -27,6 +27,8 @@ export default function MainLayout({ children, title = "Next App" }) {
             <nav className={classes.nav}>
               <CustomLink title={"Home"} href={"/"} />
               <CustomLink title={"About"} href={"/about"} />
+              <CustomLink title={"Features"} href={"/features"} />
+              <CustomLink title={"Pricing"} href={"/pricing"} />
             </nav>
           </div>
         </div>

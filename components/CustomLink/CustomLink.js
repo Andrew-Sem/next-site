@@ -3,7 +3,7 @@ import classes from "./CustomLink.module.css";
 
 export default function CustomLink({ href, title, linkProps }) {
   return (
-    <Link className={classes.link} href={href} {...linkProps}>
+    <Link href={href} {...linkProps}>
       <a className={classes.a}>{title}</a>
     </Link>
   );
