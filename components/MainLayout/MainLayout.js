@@ -14,6 +14,12 @@ export default function MainLayout({ children, title = "Next App" }) {
         />
         <meta name="description" content="losos" />
         <meta charSet="utf-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <header className={classes.header}>
         <div className="container">
