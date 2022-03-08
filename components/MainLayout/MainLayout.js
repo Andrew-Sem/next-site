@@ -44,7 +44,7 @@ export default function MainLayout({ children, title = "Next App" }) {
               <div className={cl.navbar_smallscreen}>
                 <GiHamburgerMenu
                   className={cl.overlay__open}
-                  onClick={setToggleMenu(true)}
+                  onClick={() => setToggleMenu(true)}
                 />
               </div>
 
@@ -58,7 +58,7 @@ export default function MainLayout({ children, title = "Next App" }) {
                   <VscClose
                     fontSize={27}
                     className={cl.overlay__close}
-                    onClick={setToggleMenu(false)}
+                    onClick={() => setToggleMenu(false)}
                   />
                   <ul className={cl.navbar_smallscreen__links}>
                     {links.map((link) => (
