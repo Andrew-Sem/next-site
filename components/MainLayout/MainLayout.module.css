@@ -1,25 +1,24 @@
-.app__navbar {
+.header {
   width: 100%;
   background: var(--color-dark-blue);
-  /* padding: 1rem 10rem; */
 }
 
-.app__navbar_inner {
+.header_inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
 
-.app__navbar_logo img {
-  width: 40px;
+.header__logo img {
   pointer-events: none;
 }
 
-.app__navbar_links {
+.navbar__links {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.5rem 0;
 
   list-style: none;
 }

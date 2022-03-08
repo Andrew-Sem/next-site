@@ -1,7 +1,7 @@
 import Head from "next/head";
-import classes from "./MainLayout.module.css";
-import CustomLink from "./../CustomLink/CustomLink";
 import Image from "next/image";
+import cl from "./MainLayout.module.css";
+import CustomLink from "./../CustomLink/CustomLink";
 
 export default function MainLayout({ children, title = "Next App" }) {
   const links = [
@@ -22,24 +22,24 @@ export default function MainLayout({ children, title = "Next App" }) {
         <meta name="description" content="losos" />
         <meta charSet="utf-8" />
       </Head>
-      <nav className={classes.app__navbar}>
+      <header className={cl.header}>
         <div className="container">
-          <div className={classes.app__navbar_inner}>
-            <div className={classes.app__navbar_logo}>
+          <div className={cl.header_inner}>
+            <div className={cl.header__logo}>
               <img src="" alt="app logo" />
             </div>
-            <ul className={classes.app__navbar_links}>
+            <nav className={cl.navbar__links}>
               {links.map((link) => (
                 <li key={link.href}>
                   <CustomLink title={link.title} href={link.href} />
                 </li>
               ))}
-            </ul>
+            </nav>
           </div>
         </div>
-      </nav>
+      </header>
 
-      <main className={classes.main}>{children}</main>
+      <main className={cl.main}>{children}</main>
     </>
   );
 }
