@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import cl from "./MainLayout.module.css";
 import CustomLink from "./../CustomLink/CustomLink";
 
