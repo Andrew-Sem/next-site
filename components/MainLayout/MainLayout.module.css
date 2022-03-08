@@ -1,26 +1,29 @@
-.header {
+.app__navbar {
   width: 100%;
   background: var(--color-dark-blue);
+  /* padding: 1rem 10rem; */
 }
 
-.header__inner {
+.app__navbar_inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
 }
 
-.header__logo {
+.app__navbar_logo img {
   width: 40px;
   pointer-events: none;
 }
 
-.nav {
+.app__navbar_links {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  list-style: none;
 }
 
 .main {
-  margin-top: 60px;
   padding: 1rem;
 }

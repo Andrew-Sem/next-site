@@ -4,6 +4,13 @@ import CustomLink from "./../CustomLink/CustomLink";
 import Image from "next/image";
 
 export default function MainLayout({ children, title = "Next App" }) {
+  const links = [
+    { title: "Home", href: "/" },
+    { title: "About", href: "/about" },
+    { title: "Features", href: "/features" },
+    { title: "Pricing", href: "/pricing" },
+  ];
+
   return (
     <>
       <Head>
@@ -14,31 +21,23 @@ export default function MainLayout({ children, title = "Next App" }) {
         />
         <meta name="description" content="losos" />
         <meta charSet="utf-8" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
-          rel="stylesheet"
-        />
       </Head>
-      <header className={classes.header}>
+      <nav className={classes.app__navbar}>
         <div className="container">
-          <div className={classes.header__inner}>
-            <Image
-              src="/assets/img/logo.png"
-              alt="app logo"
-              width={60}
-              height={60}
-            />
-            <nav className={classes.nav}>
-              <CustomLink title={"Home"} href={"/"} />
-              <CustomLink title={"About"} href={"/about"} />
-              <CustomLink title={"Features"} href={"/features"} />
-              <CustomLink title={"Pricing"} href={"/pricing"} />
-            </nav>
+          <div className={classes.app__navbar_inner}>
+            <div className={classes.app__navbar_logo}>
+              <img src="" alt="app logo" />
+            </div>
+            <ul className={classes.app__navbar_links}>
+              {links.map((link) => (
+                <li key={link.href}>
+                  <CustomLink title={link.title} href={link.href} />
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-      </header>
+      </nav>
 
       <main className={classes.main}>{children}</main>
     </>
