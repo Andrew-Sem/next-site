@@ -26,7 +26,6 @@
 .main {
   min-height: 100vh;
   font-family: var(--font-base);
-  padding: 1rem;
   background: var(--color-blue);
   color: var(--color-white);
 }
