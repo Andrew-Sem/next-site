@@ -1,6 +1,9 @@
 import Head from "next/head";
 import cl from "./MainLayout.module.css";
 import CustomLink from "./../CustomLink/CustomLink";
+import { useState } from "react";
+import { VscClose } from "react-icons/vsc";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function MainLayout({ children, title = "Next App" }) {
   const links = [
@@ -9,6 +12,8 @@ export default function MainLayout({ children, title = "Next App" }) {
     { title: "Features", href: "/features" },
     { title: "Pricing", href: "/pricing" },
   ];
+
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
     <>
@@ -27,12 +32,43 @@ export default function MainLayout({ children, title = "Next App" }) {
             <div className={cl.header__logo}>
               {/* <img src="" alt="app logo" /> */}
             </div>
-            <nav className={cl.navbar__links}>
-              {links.map((link) => (
-                <li key={link.href}>
-                  <CustomLink title={link.title} href={link.href} />
-                </li>
-              ))}
+            <nav>
+              <ul className={cl.navbar__links}>
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <CustomLink title={link.title} href={link.href} />
+                  </li>
+                ))}
+              </ul>
+
+              <div className={cl.navbar_smallscreen}>
+                <GiHamburgerMenu
+                  className={cl.overlay__open}
+                  onClick={setToggleMenu(true)}
+                />
+              </div>
+
+              {toggleMenu && (
+                <div
+                  className={[
+                    cl.navbar_smallscreen__overlay,
+                    cl.slide_bottom,
+                  ].join(" ")}
+                >
+                  <VscClose
+                    fontSize={27}
+                    className={cl.overlay__close}
+                    onClick={setToggleMenu(false)}
+                  />
+                  <ul className={cl.navbar_smallscreen__links}>
+                    {links.map((link) => (
+                      <li key={link.href}>
+                        <CustomLink title={link.title} href={link.href} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </nav>
           </div>
         </div>
