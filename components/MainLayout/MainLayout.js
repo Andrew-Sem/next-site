@@ -25,7 +25,7 @@ export default function MainLayout({ children, title = "Next App" }) {
         <div className="container">
           <div className={cl.header_inner}>
             <div className={cl.header__logo}>
-              <img src="" alt="app logo" />
+              {/* <img src="" alt="app logo" /> */}
             </div>
             <nav className={cl.navbar__links}>
               {links.map((link) => (
