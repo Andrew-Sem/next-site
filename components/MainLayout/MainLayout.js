@@ -62,7 +62,11 @@ export default function MainLayout({ children, title = "Next App" }) {
                   <ul className={cl.navbar_smallscreen__links}>
                     {links.map((link) => (
                       <li key={link.href}>
-                        <CustomLink title={link.title} href={link.href} />
+                        <CustomLink
+                          title={link.title}
+                          href={link.href}
+                          onClick={() => setToggleMenu(false)}
+                        />
                       </li>
                     ))}
                   </ul>

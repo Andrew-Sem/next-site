@@ -11,19 +11,9 @@
 
   transition: all 0.2s linear;
   color: var(--color-link-text);
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent;
 }
 
 .a:hover {
   color: var(--color-link-hov);
   opacity: 1;
 }
-
-.a:hover,
-.a:active {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* Теперь маленький экран */
