@@ -4,7 +4,6 @@ import CustomLink from "./../CustomLink/CustomLink";
 import { useState } from "react";
 import { VscClose } from "react-icons/vsc";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Html } from "next/document";
 
 export default function MainLayout({ children, title = "Next App" }) {
   const links = [
