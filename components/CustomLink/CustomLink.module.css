@@ -15,7 +15,7 @@
 }
 
 .a:hover {
-  color: var(--color-light-blue);
+  color: var(--color-links-hov);
   opacity: 1;
 }
 
