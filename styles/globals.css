@@ -10,7 +10,7 @@ html[data-theme="dark"] {
 
 html[data-theme="light"] {
   --color-link-text: #fff;
-  --color-text: #fff;
+  --color-text: #474747;
   --color-button: #908ae2;
   --color-header-bg: #908ae2;
   --color-main-bg: #fff;

@@ -4,6 +4,7 @@ import CustomLink from "./../CustomLink/CustomLink";
 import { useState } from "react";
 import { VscClose } from "react-icons/vsc";
 import { GiHamburgerMenu } from "react-icons/gi";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 
 export default function MainLayout({ children, title = "Next App" }) {
   const links = [
@@ -29,9 +30,7 @@ export default function MainLayout({ children, title = "Next App" }) {
       <header className={cl.header}>
         <div className="container">
           <div className={cl.header_inner}>
-            <div className={cl.header__logo}>
-              {/* <img src="" alt="app logo" /> */}
-            </div>
+            <ThemeSwitcher />
             <nav>
               <ul className={cl.navbar__links}>
                 {links.map((link) => (

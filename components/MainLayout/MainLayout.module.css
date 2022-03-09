@@ -10,10 +10,6 @@
   flex-direction: row;
 }
 
-.header__logo img {
-  pointer-events: none;
-}
-
 .navbar__links {
   display: flex;
   justify-content: center;

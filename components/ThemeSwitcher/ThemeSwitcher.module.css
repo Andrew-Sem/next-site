@@ -1,0 +1,8 @@
+.checkbox {
+  cursor: pointer;
+}
+
+.checkbox_text {
+  color: var(--color-link-text);
+  font-weight: 500;
+}
