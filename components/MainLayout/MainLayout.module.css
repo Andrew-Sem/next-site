@@ -69,7 +69,7 @@
 .navbar_smallscreen__links li {
   margin: 1rem;
   cursor: pointer;
-  color: var(--color-text);
+  color: var(--color-link-text);
   font-size: 2rem;
   text-align: center;
   font-family: var(--font-base);
