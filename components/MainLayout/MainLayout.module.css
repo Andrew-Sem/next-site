@@ -44,12 +44,12 @@
 .navbar_smallscreen .overlay__open {
   cursor: pointer;
   font-size: 30px;
-  color: var(--color-text);
+  color: var(--color-link-text);
 }
 
 .navbar_smallscreen__overlay .overlay__close {
   font-size: 30px;
-  color: var(--color-text);
+  color: var(--color-link-text);
   cursor: pointer;
 
   position: absolute;
