@@ -3,14 +3,9 @@ import cl from "./ThemeSwitcher.module.css";
 export default function ThemeSwitcher() {
   const toggleTheme = () => {
     const theme = document.documentElement.getAttribute("data-theme");
-    console.log(theme);
-    if (theme === "light") {
+    if (theme === "light")
       document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.setAttribute("data-theme", "light");
-      localStorage.setItem("theme", "light");
-    }
+    else document.documentElement.setAttribute("data-theme", "light");
   };
 
   return (
