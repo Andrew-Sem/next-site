@@ -14,6 +14,10 @@ export default function Home() {
           title="Post 2"
           body="Morbi placerat vel enim non fermentum. Sed porttitor leo non augue commodo, eget pulvinar nisi faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum at nisi convallis, laoreet nisi vel, sollicitudin nibh. Ut neque turpis, vulputate vitae tempor et, rutrum at erat."
         />
+        <Post
+          title="Post 3"
+          body="Ut pulvinar fringilla sem vitae commodo. Nam blandit dui quis quam convallis, a sollicitudin dui condimentum. Ut sit amet magna sed nunc pharetra mattis. Nullam ex tortor, porttitor nec tortor quis, molestie pellentesque dolor. Morbi eget urna at risus venenatis viverra ut sit amet mi. Maecenas vel ante scelerisque, accumsan sapien nec, suscipit metus."
+        />
       </div>
     </MainLayout>
   );
