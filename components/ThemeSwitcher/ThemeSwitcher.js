@@ -9,6 +9,7 @@ export default function ThemeSwitcher() {
   };
 
   return (
+    // <div className={cl.themeSwitcher_wrapper}>
     <div>
       <input
         className={cl.checkbox}
@@ -18,5 +19,6 @@ export default function ThemeSwitcher() {
       />
       <span className={cl.checkbox_text}>Switch theme</span>
     </div>
+    // </div>
   );
 }

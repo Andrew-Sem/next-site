@@ -1,0 +1,5 @@
+.post {
+  border-radius: 0.5rem;
+  margin: 2.5rem 0;
+  color: var(--color-text);
+}
