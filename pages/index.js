@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <MainLayout title={"Home Page"}>
       <div className="container">
-        <h1>Home Page</h1>
         <Post
           title="Post 1"
           body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac nibh gravida, tempor mi maximus, dapibus augue. Duis ut semper nulla. Maecenas placerat scelerisque sagittis. Sed at odio eu magna posuere laoreet quis tincidunt massa. Quisque a consectetur est. Maecenas vitae aliquet sem. Etiam a ornare metus."

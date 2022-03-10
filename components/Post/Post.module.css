@@ -1,5 +1,7 @@
 .post {
   border-radius: 0.5rem;
-  margin: 2.5rem 0;
+  margin-bottom: 1rem;
   color: var(--color-text);
+  background: var(--color-header-bg);
+  padding: 1.5rem;
 }
