@@ -76,7 +76,6 @@ export default function MainLayout({ children, title = "Next App" }) {
           </div>
         </div>
       </header>
-
       <main className={cl.main}>{children}</main>
     </>
   );

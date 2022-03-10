@@ -10,7 +10,7 @@
   text-decoration: none;
 
   transition: all 0.2s linear;
-  color: var(--color-link-text);
+  color: var(--color-text);
 }
 
 .a:hover {
