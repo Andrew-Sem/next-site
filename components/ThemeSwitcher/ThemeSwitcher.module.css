@@ -1,8 +1,21 @@
-.checkbox {
+.theme_switcher {
+  padding: 0.7rem;
+  border-radius: 5px;
   cursor: pointer;
+  border: none;
+  color: var(--color-button-text);
+  background: var(--color-button-bg);
+  transition: opacity 0.2s linear;
 }
 
-.checkbox_text {
+.switcher_light {
+  cursor: pointer;
+  font-size: 28px;
   color: var(--color-text);
-  font-weight: 500;
+}
+
+.switcher_dark {
+  cursor: pointer;
+  font-size: 25px;
+  color: var(--color-text);
 }
