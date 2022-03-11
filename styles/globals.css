@@ -9,13 +9,13 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="light"] {
-  --color-text: #474747;
+  --color-text: #2c2c2c;
   --color-button-bg: #908ae2;
   --color-header-bg: #fff;
   --color-main-bg: #e2e4e7;
   --color-link-hov: #888;
   --color-button-hov: #fff;
-  --box-shadow: -10px 5px 20px rgba(0, 0, 0, 0.2);
+  --box-shadow: -10px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 html {
