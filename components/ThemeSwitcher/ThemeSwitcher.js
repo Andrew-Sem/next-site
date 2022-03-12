@@ -26,18 +26,18 @@ export default function ThemeSwitcher() {
   };
 
   return (
-    <>
+    <div className={cl.switcher_wrapper}>
       {icon === "dark" ? (
         <BsMoon
-          className={cl.switcher_dark}
+          className={[cl.switcher, cl.dark].join(" ")}
           onClick={() => toggleTheme("light")}
         />
       ) : (
         <BiSun
-          className={cl.switcher_light}
+          className={[cl.switcher, cl.light].join(" ")}
           onClick={() => toggleTheme("dark")}
         />
       )}
-    </>
+    </div>
   );
 }

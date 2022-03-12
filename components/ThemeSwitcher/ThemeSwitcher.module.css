@@ -1,21 +1,26 @@
-.theme_switcher {
-  padding: 0.7rem;
-  border-radius: 5px;
+.switcher_wrapper {
   cursor: pointer;
-  border: none;
-  color: var(--color-button-text);
-  background: var(--color-button-bg);
+  transition: background 0.2s linear;
+  display: flex;
+  align-items: center;
+}
+
+.switcher {
+  cursor: pointer;
+  color: var(--color-text);
   transition: opacity 0.2s linear;
 }
 
-.switcher_light {
-  cursor: pointer;
-  font-size: 28px;
-  color: var(--color-text);
+.switcher:hover {
+  opacity: 0.7;
 }
 
-.switcher_dark {
-  cursor: pointer;
-  font-size: 25px;
-  color: var(--color-text);
+.light {
+  border-radius: 50%;
+  font-size: 35px;
+}
+
+.dark {
+  border-radius: 50%;
+  font-size: 30px;
 }

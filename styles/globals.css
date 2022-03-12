@@ -60,6 +60,6 @@ a {
 
 @media screen and (max-width: 650px) {
   .container {
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
 }

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import cl from "./MainLayout.module.css";
-import CustomLink from "./../CustomLink/CustomLink";
+import MyLink from "../UI/MyLink/MyLink";
 import { useState } from "react";
 import { VscClose } from "react-icons/vsc";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -35,7 +35,7 @@ export default function MainLayout({ children, title = "Next App" }) {
               <ul className={cl.navbar__links}>
                 {links.map((link) => (
                   <li key={link.href}>
-                    <CustomLink title={link.title} href={link.href} />
+                    <MyLink title={link.title} href={link.href} />
                   </li>
                 ))}
               </ul>
@@ -62,7 +62,7 @@ export default function MainLayout({ children, title = "Next App" }) {
                   <ul className={cl.navbar_smallscreen__links}>
                     {links.map((link) => (
                       <li key={link.href}>
-                        <CustomLink
+                        <MyLink
                           title={link.title}
                           href={link.href}
                           onClick={() => setToggleMenu(false)}
