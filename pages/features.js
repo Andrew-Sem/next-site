@@ -10,7 +10,7 @@ export default function Features() {
     <MainLayout title="Features Page">
       <div className="container">
         <Modal visible={modal} setVisible={setModal}>
-          <h1>I'm Modal</h1>
+          <h1>Im Modal</h1>
         </Modal>
         <ModalBtn onClick={() => setModal(!modal)} />
       </div>
