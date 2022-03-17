@@ -1,0 +1,7 @@
+.input {
+  color: var(--color-text);
+  border: none;
+  background: var(--color-main-bg);
+  outline: none;
+  margin: 0.5rem;
+}

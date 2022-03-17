@@ -4,7 +4,7 @@ import MyLink from "../UI/MyLink/MyLink";
 import { useState } from "react";
 import { VscClose } from "react-icons/vsc";
 import { GiHamburgerMenu } from "react-icons/gi";
-import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
+import ThemeSwitcher from "../UI/ThemeSwitcher/ThemeSwitcher";
 
 export default function MainLayout({ children, title = "Next App" }) {
   const links = [

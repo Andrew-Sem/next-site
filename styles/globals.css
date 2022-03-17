@@ -30,6 +30,16 @@ ul {
   font-family: var(--font-base);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -42,13 +52,19 @@ a {
 }
 
 .container {
-  padding: 1rem 10rem;
+  padding: 1rem 11rem;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 2000px) {
   .container {
-    padding: 1rem 10rem;
+    padding: 1rem 20rem;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .container {
+    padding: 1rem 11rem;
   }
 }
 
