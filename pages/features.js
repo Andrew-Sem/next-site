@@ -14,6 +14,7 @@ export default function Features() {
 
   const createNote = (newNote) => {
     setNotes([...notes, newNote]);
+    localStorage.setItem("notes", notes);
     setModal(false);
   };
 
