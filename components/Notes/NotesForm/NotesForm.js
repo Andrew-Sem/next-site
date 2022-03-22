@@ -5,22 +5,24 @@ import cl from "./NotesForm.module.css";
 
 export default function NotesForm({ create }) {
   const [note, setNote] = useState({ title: "", body: "" });
+  const [titlePlaceholder, setTitlePlaceholder] = useState("Название заметки");
+  const [bodyPlaceholder, setBodyPlaceholder] = useState("Описание заметки");
 
   const addNewNote = (e) => {
     e.preventDefault(); // чтобы страничка не обновлялась
-    if (
-      note.title === "" ||
-      note.body === "" ||
-      note.title === "Поля не могут" ||
-      note.body === "быть пустыми"
-    )
-      return setNote({ title: "Поля не могут", body: "быть пустыми" });
+    if (note.title === "" || note.body === "")
+      return (
+        setTitlePlaceholder("Здесь пусто..."),
+        setBodyPlaceholder("Здесь пусто...")
+      );
     const newNote = {
       // создаём объект нового поста
       ...note, // разворачиваем объект поста
       id: Date.now(), // и добавляем к нему id
     };
     create(newNote);
+    setTitlePlaceholder("Название заметки");
+    setBodyPlaceholder("Описание заметки");
     setNote({ title: "", body: "" });
   };
 
@@ -31,13 +33,13 @@ export default function NotesForm({ create }) {
         value={note.title}
         onChange={(e) => setNote({ ...note, title: e.target.value })} // при изменении значения инпута меняем пост
         type="text"
-        placeholder="Название заметки"
+        placeholder={titlePlaceholder}
       />
       <input
         value={note.body}
         onChange={(e) => setNote({ ...note, body: e.target.value })}
         type="text"
-        placeholder="Описание заметки"
+        placeholder={bodyPlaceholder}
       />
       <MyBtn onClick={addNewNote}>Create</MyBtn>
     </form>
