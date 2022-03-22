@@ -4,26 +4,18 @@ import ModalBtn from "../components/UI/ModalBtn/ModalBtn";
 import Modal from "./../components/UI/Modal/Modal";
 import NotesList from "../components/Notes/NotesList/NotesList";
 import NotesForm from "./../components/Notes/NotesForm/NotesForm";
+import useNotes from "../hooks/useNotes";
 
 export default function Features() {
   const [modal, setModal] = useState(false);
-  const [notes, setNotes] = useState([
-    { title: "1", body: "first note", id: "1" },
-    { title: "2", body: "second note", id: "2" },
-  ]);
-
-  const createNote = (newNote) => {
-    setNotes([...notes, newNote]);
-    localStorage.setItem("notes", notes);
-    setModal(false);
-  };
+  const [notes, setNotes] = useNotes(setModal);
 
   return (
     <MainLayout title="Features Page">
       <div className="container">
         <NotesList notes={notes} />
         <Modal visible={modal} setVisible={setModal}>
-          <NotesForm create={createNote} />
+          <NotesForm create={setNotes} />
         </Modal>
         <ModalBtn onClick={() => setModal(!modal)} />
       </div>
