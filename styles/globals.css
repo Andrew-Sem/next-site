@@ -1,6 +1,6 @@
 html[data-theme="dark"] {
   --color-text: rgba(255, 255, 255, 0.8);
-  --color-button-text: #000;
+  --color-button-text: #2c2c2c;
   --color-button-bg: #61dafb;
   --color-button-hov: #fff;
   --color-header-bg: #232831;
