@@ -17,7 +17,7 @@ export default function Features() {
         <Modal visible={modal} setVisible={setModal}>
           <NotesForm create={setNotes} />
         </Modal>
-        <ModalBtn onClick={() => setModal(!modal)} />
+        <ModalBtn visible={!modal} onClick={() => setModal(!modal)} />
       </div>
     </MainLayout>
   );

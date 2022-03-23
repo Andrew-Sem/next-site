@@ -1,18 +1,19 @@
 .switcher_wrapper {
+  padding: 0.2rem;
   cursor: pointer;
   transition: background 0.2s linear;
   display: flex;
   align-items: center;
+  border-radius: 50%;
 }
 
 .switcher {
   cursor: pointer;
   color: var(--color-text);
-  transition: opacity 0.2s linear;
 }
 
-.switcher:hover {
-  opacity: 0.7;
+.switcher_wrapper:hover {
+  background: var(--color-icon-hov);
 }
 
 .light {
@@ -22,5 +23,5 @@
 
 .dark {
   border-radius: 50%;
-  font-size: 30px;
+  font-size: 35px;
 }

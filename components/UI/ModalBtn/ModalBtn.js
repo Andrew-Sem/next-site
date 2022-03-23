@@ -1,10 +1,15 @@
 import cl from "./ModalBtn.module.css";
-import { MdAdd } from "react-icons/md";
+import { BsPlusCircleFill } from "react-icons/bs";
 
-export default function ModalBtn({ ...props }) {
+export default function ModalBtn({ visible, ...props }) {
+  const rootClasses = [cl.btn];
+  if (!visible) {
+    rootClasses.push(cl.no_active);
+  }
+
   return (
     <div>
-      <MdAdd className={cl.btn} {...props} />
+      <BsPlusCircleFill className={rootClasses.join(" ")} {...props} />
     </div>
   );
 }

@@ -29,13 +29,13 @@ export default function NotesForm({ create }) {
   return (
     <form className={cl.form}>
       <h2 className={cl.form__title}>New note</h2>
-      <input
+      <MyInput
         value={note.title}
         onChange={(e) => setNote({ ...note, title: e.target.value })} // при изменении значения инпута меняем пост
         type="text"
         placeholder={titlePlaceholder}
       />
-      <input
+      <MyInput
         value={note.body}
         onChange={(e) => setNote({ ...note, body: e.target.value })}
         type="text"

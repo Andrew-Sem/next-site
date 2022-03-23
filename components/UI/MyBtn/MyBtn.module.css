@@ -2,10 +2,15 @@
   padding: 1rem 1.5rem;
   margin-top: 1rem;
   cursor: pointer;
-  background: var(--color-main-bg);
-  color: var(--color-text);
+  background: var(--color-button-bg);
+  color: var(--color-button-text);
   border-radius: 0.5rem;
   border: none;
   font-family: var(--font-base);
   font-weight: 600;
+  transition: background 0.2s ease-in;
+}
+
+.btn:hover {
+  background: var(--color-button-hov);
 }
