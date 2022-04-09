@@ -12,13 +12,11 @@ export default function Features() {
 
   return (
     <MainLayout title="Features Page">
-      <div className="container">
-        <NotesList notes={notes} />
-        <Modal visible={modal} setVisible={setModal}>
-          <NotesForm create={setNotes} />
-        </Modal>
-        <ModalBtn visible={!modal} onClick={() => setModal(!modal)} />
-      </div>
+      <NotesList notes={notes} />
+      <Modal visible={modal} setVisible={setModal}>
+        <NotesForm create={setNotes} />
+      </Modal>
+      <ModalBtn visible={!modal} onClick={() => setModal(!modal)} />
     </MainLayout>
   );
 }
