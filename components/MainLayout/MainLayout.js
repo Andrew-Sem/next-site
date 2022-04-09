@@ -76,9 +76,7 @@ export default function MainLayout({ children, title = "Next App" }) {
           </div>
         </div>
       </header>
-      <div className="container">
-        <main className={cl.main}>{children}</main>
-      </div>
+      <main className={cl.main}>{children}</main>
     </>
   );
 }
