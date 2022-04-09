@@ -1,0 +1,7 @@
+.note{
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  color: var(--color-text);
+  background: var(--color-header-bg);
+  padding: 1.5rem;
+}
