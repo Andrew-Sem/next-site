@@ -26,10 +26,12 @@ export default function Test({ posts: serverPosts }) {
 
   return (
     <MainLayout>
-      <h1>Test page</h1>
-      {posts.map((post) => (
-        <Note title={post.title} body={post.body} key={post.id} />
-      ))}
+      <div className="container">
+        <h1>Test page</h1>
+        {posts.map((post) => (
+          <Note title={post.title} body={post.body} key={post.id} />
+        ))}
+      </div>
     </MainLayout>
   );
 }

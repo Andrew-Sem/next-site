@@ -56,7 +56,6 @@ a {
 }
 
 .container {
-  background: var(--color-main-bg);
   padding: 1rem 11rem;
   margin: 0 auto;
 }
