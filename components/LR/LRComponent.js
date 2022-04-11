@@ -14,7 +14,6 @@ const LRComponent = () => {
     let currentWord = "";
 
     function S() {
-      console.log("Вызвалась S");
       currentWord = "";
       while (value[i] === " " || value[i] === ".") i++;
       if (i === value.length) return;
@@ -24,7 +23,6 @@ const LRComponent = () => {
     }
 
     function A() {
-      console.log("Вызвалась A");
       currentWord += value[i];
       i++;
       if (!value[i]) return S();
@@ -38,8 +36,6 @@ const LRComponent = () => {
     }
 
     function B() {
-      console.log("Вызвалась B");
-
       currentWord += value[i];
       i++;
       const newLex = {
@@ -52,7 +48,6 @@ const LRComponent = () => {
     }
 
     function D() {
-      console.log("Вызвалась D");
       console.log(value[i]);
       currentWord += value[i];
       i++;
@@ -65,7 +60,6 @@ const LRComponent = () => {
         setResult((result) => [...result, newLex]);
         return S();
       }
-      console.log("losos");
       while (value[i].match(regNumber)) {
         currentWord += value[i];
         i++;
@@ -83,7 +77,6 @@ const LRComponent = () => {
     }
 
     function F() {
-      console.log("Вызвалась F");
       currentWord += value[i];
       i++;
       if (!value[i]) return S();
