@@ -5,15 +5,15 @@ import cl from "./NotesForm.module.css";
 
 export default function NotesForm({ create }) {
   const [note, setNote] = useState({ title: "", body: "" });
-  const [titlePlaceholder, setTitlePlaceholder] = useState("Название заметки");
-  const [bodyPlaceholder, setBodyPlaceholder] = useState("Описание заметки");
+  const [titlePlaceholder, setTitlePlaceholder] = useState("Title");
+  const [bodyPlaceholder, setBodyPlaceholder] = useState("Desription");
 
   const addNewNote = (e) => {
     e.preventDefault(); // чтобы страничка не обновлялась
     if (note.title === "" || note.body === "")
       return (
-        setTitlePlaceholder("Здесь пусто..."),
-        setBodyPlaceholder("Здесь пусто...")
+        setTitlePlaceholder("It's empty here..."),
+        setBodyPlaceholder("It's empty here...")
       );
     const newNote = {
       // создаём объект нового поста
@@ -21,8 +21,8 @@ export default function NotesForm({ create }) {
       id: Date.now(), // и добавляем к нему id
     };
     create(newNote);
-    setTitlePlaceholder("Название заметки");
-    setBodyPlaceholder("Описание заметки");
+    setTitlePlaceholder("Title");
+    setBodyPlaceholder("Desription");
     setNote({ title: "", body: "" });
   };
 
