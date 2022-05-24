@@ -4,7 +4,7 @@ export default function About() {
   return (
     <MainLayout title="About Page">
       <div className="container">
-        <h1>About Page</h1>
+        <h3>Hello, I am Andrew Semenov, fronted-developer</h3>
       </div>
     </MainLayout>
   );

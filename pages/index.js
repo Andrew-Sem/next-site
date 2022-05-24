@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MainLayout from "../components/MainLayout/MainLayout";
 import Note from "./../components/Notes/Note/Note";
+import Loader from "./../components/UI/Loader/Loader";
 
 export default function Home({ posts: serverPosts }) {
   const [posts, setPosts] = useState(serverPosts);
@@ -19,7 +20,7 @@ export default function Home({ posts: serverPosts }) {
   if (!posts) {
     return (
       <MainLayout>
-        <p>Loading...</p>
+        <Loader />
       </MainLayout>
     );
   }

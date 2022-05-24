@@ -19,7 +19,7 @@ html[data-theme="light"] {
   --color-main-bg: #e2e4e7;
   --color-link-hov: #7d54f2;
   --color-icon-hov: rgba(0, 0, 0, 0.1);
-  --box-shadow: 0 0px 20px rgba(0, 0, 0, 0.1);
+  --box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 html {
