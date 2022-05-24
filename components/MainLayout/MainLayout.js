@@ -6,11 +6,7 @@ import { VscClose } from "react-icons/vsc";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ThemeSwitcher from "../UI/ThemeSwitcher/ThemeSwitcher";
 
-export default function MainLayout({
-  children,
-  title = "Next App",
-  onSmallNavClick = null,
-}) {
+export default function MainLayout({ children, title = "Next App" }) {
   const links = [
     { title: "Home", href: "/" },
     { title: "About", href: "/about" },
@@ -49,7 +45,6 @@ export default function MainLayout({
                   className={cl.overlay__open}
                   onClick={() => {
                     setToggleMenu(true);
-                    onSmallNavClick && onSmallNavClick(false);
                   }}
                 />
               </div>
@@ -66,7 +61,6 @@ export default function MainLayout({
                     className={cl.overlay__close}
                     onClick={() => {
                       setToggleMenu(false);
-                      onSmallNavClick && onSmallNavClick(true);
                     }}
                   />
                   <ul className={cl.navbar_smallscreen__links}>

@@ -1,10 +1,11 @@
 .input {
   color: var(--color-text);
   border: none;
+  border-radius: 0.1rem;
   background: var(--color-main-bg);
   outline: none;
   margin: 0.5rem 0;
   max-width: 300px;
-  border-bottom: 1px solid var(--color-text);
   font-size: 16px;
+  padding: 0.2rem;
 }

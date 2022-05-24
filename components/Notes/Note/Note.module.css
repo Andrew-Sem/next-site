@@ -1,4 +1,5 @@
 .note {
+  word-wrap: break-word;
   border-radius: 0.5rem;
   margin-top: 1rem;
   color: var(--color-text);

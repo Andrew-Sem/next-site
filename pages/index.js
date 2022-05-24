@@ -1,27 +1,50 @@
+import React, { useState, useEffect } from "react";
 import MainLayout from "../components/MainLayout/MainLayout";
-import Post from "../components/Post/Post";
+import Note from "./../components/Notes/Note/Note";
 
-export default function Home() {
+export default function Home({ posts: serverPosts }) {
+  const [posts, setPosts] = useState(serverPosts);
+
+  useEffect(() => {
+    async function load() {
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+      const data = await res.json();
+      setPosts(data);
+    }
+    if (!serverPosts) {
+      load();
+    }
+  });
+
+  if (!posts) {
+    return (
+      <MainLayout>
+        <p>Loading...</p>
+      </MainLayout>
+    );
+  }
+
   return (
-    <MainLayout title={"Home Page"}>
+    <MainLayout>
       <div className="container">
-        <Post
-          title="Post 1"
-          body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac nibh gravida, tempor mi maximus, dapibus augue. Duis ut semper nulla. Maecenas placerat scelerisque sagittis. Sed at odio eu magna posuere laoreet quis tincidunt massa. Quisque a consectetur est. Maecenas vitae aliquet sem. Etiam a ornare metus."
-        />
-        <Post
-          title="Post 2"
-          body="Morbi placerat vel enim non fermentum. Sed porttitor leo non augue commodo, eget pulvinar nisi faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum at nisi convallis, laoreet nisi vel, sollicitudin nibh. Ut neque turpis, vulputate vitae tempor et, rutrum at erat."
-        />
-        <Post
-          title="Post 3"
-          body="Ut pulvinar fringilla sem vitae commodo. Nam blandit dui quis quam convallis, a sollicitudin dui condimentum. Ut sit amet magna sed nunc pharetra mattis. Nullam ex tortor, porttitor nec tortor quis, molestie pellentesque dolor. Morbi eget urna at risus venenatis viverra ut sit amet mi. Maecenas vel ante scelerisque, accumsan sapien nec, suscipit metus."
-        />
-        <Post
-          title="Post 4"
-          body="Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Aliquam vel mi blandit turpis pellentesque semper eget at eros. Etiam tempor sem ut facilisis blandit. Cras sollicitudin consequat dictum. Quisque commodo velit quis auctor sodales. Vivamus lacinia convallis porta."
-        />
+        {/* <h1>Test page</h1> */}
+        {posts.map((post) => (
+          <Note title={post.title} body={post.body} key={post.id} />
+        ))}
       </div>
     </MainLayout>
   );
 }
+
+Home.getInitialProps = async ({ req }) => {
+  if (!req) {
+    return { posts: null };
+  }
+
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const posts = await res.json();
+
+  return {
+    posts,
+  };
+};
