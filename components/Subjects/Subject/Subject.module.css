@@ -1,0 +1,43 @@
+.subject {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  color: var(--color-text);
+  background: var(--color-header-bg);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left_block {
+  width: 20%;
+  border-right: 1px solid var(--color-text);
+  padding: 0 1rem 0;
+}
+.middle_block {
+  width: 60%;
+  border-right: 1px solid var(--color-text);
+  padding: 0 1rem 0;
+}
+.right_block {
+  width: 20%;
+  padding: 0 1rem 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .subject {
+    padding: 0.3rem;
+    font-size: 14px;
+  }
+  .left_block {
+    padding: 0.5rem;
+    width: 25%;
+  }
+  .middle_block {
+    padding: 0.5rem;
+  }
+  .right_block {
+    padding: 0.5rem;
+  }
+}
