@@ -35,9 +35,11 @@
     width: 25%;
   }
   .middle_block {
+    width: 50%;
     padding: 0.5rem;
   }
   .right_block {
+    width: 25%;
     padding: 0.5rem;
   }
 }
