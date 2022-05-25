@@ -9,6 +9,8 @@ import ThemeSwitcher from "../UI/ThemeSwitcher/ThemeSwitcher";
 export default function MainLayout({ children, title = "Next App" }) {
   const links = [
     { title: "Home", href: "/" },
+    { title: "Exams", href: "/exams" },
+    { title: "Credits", href: "/credits" },
     { title: "About", href: "/about" },
     { title: "Features", href: "/features" },
     { title: "Pricing", href: "/pricing" },
